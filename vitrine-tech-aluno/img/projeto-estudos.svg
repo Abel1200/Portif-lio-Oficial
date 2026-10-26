@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <rect width="640" height="360" fill="#dcebfA"/>
+  <rect x="65" y="55" width="510" height="250" rx="24" fill="#fff"/>
+  <rect x="90" y="85" width="290" height="26" rx="8" fill="#1469c7"/>
+  <rect x="90" y="138" width="205" height="120" rx="16" fill="#b9d8f6"/>
+  <rect x="320" y="138" width="225" height="24" rx="8" fill="#17955a"/>
+  <rect x="320" y="182" width="180" height="18" rx="7" fill="#bddcca"/>
+  <rect x="320" y="220" width="205" height="18" rx="7" fill="#bddcca"/>
+  <text x="90" y="292" font-family="Arial" font-size="22" font-weight="700" fill="#0b2545">PLANO DE ESTUDOS</text>
+</svg>
