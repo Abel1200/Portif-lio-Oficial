@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facilitador de Vida: Foco & Tarefas</title>
+    <!-- Vincula o arquivo CSS externo -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- CRONÔMETRO POMODORO -->
+        <div class="pomodoro-section">
+            <h2>⏱️ Timer Foco (25 min)</h2>
+            <div class="timer-display" id="timer">25:00</div>
+            <button id="start-btn" onclick="toggleTimer()">Iniciar</button>
+            <button class="btn-reset" onclick="resetTimer()">Reiniciar</button>
+        </div>
+
+        <!-- LISTA DE TAREFAS -->
+        <div class="todo-section">
+            <h2>📝 Minhas Tarefas</h2>
+            <div class="todo-input-group">
+                <input type="text" id="task-input" placeholder="O que você precisa fazer agora?" onkeypress="handleKeyPress(event)">
+                <button onclick="addTask()">Adicionar</button>
+            </div>
+            <ul id="task-list">
+                <!-- As tarefas aparecerão aqui dinamicamente -->
+            </ul>
+        </div>
+    </div>
+
+    <!-- Vincula o arquivo JavaScript externo -->
+    <script src="script.js"></script>
+</body>
+</html>
