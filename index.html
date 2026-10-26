@@ -1,261 +1,80 @@
-﻿<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title> Portfólio Pessoal | Desenvolvimento de Sistemas</title>
-  <meta name="description" content="Portfólio de projetos e aprendizados de um estudante de Desenvolvimento de Sistemas." />
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-
-  <header class="topo">
-    <a href="#inicio" class="logo" aria-label="Ir para o início do portfólio">
-      <span>A</span> ABEL SOBREIRA 3DS
-    </a>
-    <button class="botao-menu" id="botaoMenu" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu">
-      ☰
-    </button>
-    <nav class="menu" id="menu" aria-label="Menu principal">
-      <a href="#projetos">Projetos</a>
-      <a href="#habilidades">Especialidades</a>
-      <a href="#contato">Contato</a>
-    </nav>
-  </header>
-
-  <main id="inicio">
-    
-    <section class="hero" aria-label="Apresentação principal">
-      <div class="hero-conteudo">
-        <div class="foto-perfil">
-          <img src="assets/fotominha.jpg" alt="Sua foto de perfil">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vitrine Tech — atividade</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="pagina">
+      <header class="cabecalho">
+        <div>
+          <span class="etiqueta">Projetos do 3º ano</span>
+          <h1>Vitrine Tech</h1>
+          <p>Ideias criadas por estudantes.</p>
         </div>
+      </header>
 
-        <span class="selo">
-          <span class="bolinha" aria-hidden="true"></span> 
-          Estudante de Desenvolvimento de Sistemas
-        </span>
-        <h1>Construindo arquiteturas e sistemas escaláveis.</h1>
-        <p>Desenvolvedor de Sistemas em formação técnica pelo Ensino Médio. Este portfólio reúne minhas principais iniciativas, estudos aplicados e experiências práticas em programação.</p>
-        <div class="acoes">
-          <a class="botao" href="#projetos">Ver meus projetos</a>
-          <a class="botao secundario" href="#contato">Entrar em contato</a>
-        </div>
-      </div>
+      <nav class="menu" aria-label="Categorias de projetos">
+        <strong>Categorias</strong>
+        <a href="#sites">Sites</a>
+        <a href="#aplicativos">Aplicativos</a>
+        <a href="#jogos">Jogos</a>
+      </nav>
 
-      <div class="visual">
-        <div class="foto-principal">
-          <img src="assets/fotoquatro.png" alt="Ilustração de dois estudantes analisando linhas de código em uma tela" />
-        </div>
-        <div class="card-flutuante">
-          Em evolução
-          <div class="barras" aria-hidden="true">
-            <span></span><span></span><span></span>
-          </div>
-        </div>
-      </div>
-    </section>
+      <main class="principal" id="sites">
+        <h2>Projetos da turma</h2>
 
-    <hr class="divisor" />
+        <section class="cards" aria-label="Projetos em destaque">
+          <article class="card">
+            
+            <img loading="lazy" src="img/projeto-agenda.svg"... /> 
+            <img loading="lazy" src="img/projeto-quiz.svg" ... />
 
-    <section aria-labelledby="destaques">
-      <div class="cabecalho-secao">
-        <h2 id="destaques">Destaques do meu aprendizado</h2>
-      </div>
-      <div>
-        <p>Alguns momentos importantes da minha trajetória estudando programação, design e lógica.</p>
-      </div>
-
-      <div class="carrossel">
-        <div class="indicadores" id="indicadores" aria-label="Indicadores de slides"></div>
-        <div class="trilha" id="trilha" aria-live="polite">
-          
-          <article class="slide">
-            <img src="assets/fototrês.png" alt="Protótipo de interface digital exibindo elementos responsivos" />
-            <div class="conteudo-slide">
-              <h3>Primeiras interfaces</h3>
-              <p>Projetos com HTML e CSS para aprender estrutura, estilo, organização visual e responsividade.</p>
+            <div class="conteudo-card">
+              <h3>Plano de Estudos</h3>
+              <p>Organiza matérias, prazos e metas semanais.</p>
+              <button class="curtir" type="button">Curtir projeto</button>
             </div>
           </article>
 
-          <article class="slide">
-            <img src="assets/fotodois.png" alt="Esquema de cores e tipografia aplicados em um layout web" />
-            <div class="conteudo-slide">
-              <h3>Design que comunica</h3>
-              <p>Estudo de cores, espaçamentos, cartões e componentes para criar páginas mais claras e agradáveis.</p>
+          <article class="card" id="aplicativos">
+            <img
+            
+              src="img/projeto-agenda.svg"
+              alt="Ilustração de uma agenda escolar digital"
+              width="640"
+              height="360"
+            />
+            <div class="conteudo-card">
+              <h3>Agenda Escolar</h3>
+              <p>Reúne tarefas, avaliações e lembretes.</p>
+              <button class="curtir" type="button">Curtir projeto</button>
             </div>
           </article>
 
-          <article class="slide">
-            <img src="assets/fotoum.png" alt="Editor de código exibindo funções lógicas em JavaScript" />
-            <div class="conteudo-slide">
-              <h3>JavaScript em ação</h3>
-              <p>Interações simples, menu responsivo, filtros e carrossel para praticar lógica de programação.</p>
+          <article class="card" id="jogos">
+            <img
+              src="img/projeto-quiz.svg"
+              alt="Ilustração de um jogo de perguntas e respostas"
+              width="640"
+              height="360"
+            />
+            <div class="conteudo-card">
+              <h3>Quiz Técnico</h3>
+              <p>Revisa conteúdos de programação por desafios.</p>
+              <button class="curtir" type="button">Curtir projeto</button>
             </div>
           </article>
+        </section>
 
-        </div>
-        
-        <div class="controles">
-          <button class="icone" id="anterior" aria-label="Slide anterior">‹</button>
-          <button class="icone" id="proximo" aria-label="Próximo slide">›</button>
-        </div>
-      </div>
-    </section>
+        <p id="mensagem" aria-live="polite"></p>
+      </main>
 
-    <hr class="divisor" />
+      <footer class="rodape">3º ano • Programação Front-End</footer>
+    </div>
 
-    <section id="projetos" aria-labelledby="titulo-projetos">
-      <div class="cabecalho-secao">
-        <h2 id="titulo-projetos">Meus projetos</h2>
-      </div>
-      <div>
-        <p>Atividades e protótipos desenvolvidos durante o curso técnico em Desenvolvimento de Sistemas.</p>
-      </div>
-
-      <div class="filtros" aria-label="Filtrar projetos por categoria">
-        <button class="filtro ativo" data-filtro="todos" aria-current="true">Todos</button>
-        <button class="filtro" data-filtro="site">Sites</button>
-        <button class="filtro" data-filtro="app">Apps</button>
-        <button class="filtro" data-filtro="design">Design</button>
-      </div>
-
-            <div class="grade-projetos">
-        
-        <!-- CARD 1 -->
-        <article class="projeto" data-categoria="site">
-          <a href="barbearia/index.html" target="_blank" class="link-card">
-            <div class="capa" aria-hidden="true"><span>Site</span></div>
-            <img src="assets/projeto1.png" alt="">
-            <div class="corpo-projeto">
-              <h3>Barbershop vip</h3>
-              <p>Página simples com apresentação pessoal, imagens, links e organização por seções.</p>
-              <div class="tags"><span>HTML</span><span>CSS</span></div>
-            </div>
-          </a>
-        </article>
-
-        <!-- CARD 2 -->
-        <article class="projeto" data-categoria="app">
-          <a href="bateria/desenvolvimento.py" target="_blank" class="link-card">
-            <div class="capa" aria-hidden="true"><span>App</span></div>
-            <img src="assets/projeto2.png" alt="">
-            <div class="corpo-projeto">
-              <h3>Simulador de Bateria</h3>
-              <p>Simula um intsrumento musical, contendo efeito sonoros que fazem referência ao som real.</p>
-              <div class="tags"><span>PY</span><span>HTML</span></div>
-            </div>
-          </a>
-        </article>
-
-        <!-- CARD 3 -->
-        <article class="projeto" data-categoria="design">
-          <a href="petshop/index.html" target="_blank" class="link-card">
-            <div class="capa" aria-hidden="true"><span>Design</span></div>
-            <img src="assets/projeto3.png" alt="">
-            <div class="corpo-projeto">
-              <h3>PETSHOP</h3>
-              <p>Neste projeto painel de facil acessibilidade e organização para agendamento em um petshop.</p>
-              <div class="tags"><span>UI</span><span>CSS</span></div>
-            </div>
-          </a>
-        </article>
-
-        <!-- CARD 4 -->
-        <article class="projeto" data-categoria="site">
-          <a href="#" target="_blank" class="link-card">
-            <div class="capa" aria-hidden="true"><span>Site</span></div>
-            <img src="assets/projeto6.png" alt="">
-            <div class="corpo-projeto">
-              <h3>Portfólio Pessoal</h3>
-              <p>Projeto para apresentar minha trajetória, meus estudos e meus contatos profissionais.</p>
-              <div class="tags"><span>Layout</span><span>Mobile</span></div>
-            </div>
-          </a>
-        </article>
-
-        <!-- CARD 5 -->
-        <article class="projeto" data-categoria="app">
-          <a href="Organizador/index.html" target="_blank" class="link-card">
-            <div class="capa" aria-hidden="true"><span>App</span></div>
-            <img src="assets/projeto4.png" alt="">
-            <div class="corpo-projeto">
-              <h3>Organizador de tarefa</h3>
-              <p>Este é um sistema simples, mas muito eficaz para facilitar a vida, ajudando a focar no trabalho e a gerenciar os afazeres em um só lugar.</p>
-              <div class="tags"><span>HTML</span><span>lógica</span></div>
-            </div>
-          </a>
-        </article>
-
-        <!-- CARD 6 -->
-        <article class="projeto" data-categoria="design">
-          <a href="vitrine-tech/vitrine-tech-aluno/index.html" target="_blank" class="link-card">
-            <div class="capa" aria-hidden="true"><span>Design</span></div>
-            <img src="assets/projeto5.png" alt="">
-            <div class="corpo-projeto">
-              <h3>Cards de Perfil</h3>
-              <p>Componentes visuais para apresentar habilidades, informações pessoais e redes de contato.</p>
-              <div class="tags"><span>Cards</span><span>Grid</span></div>
-            </div>
-          </a>
-        </article>
-
-      </div>
-
-    </section>
-
-    <hr class="divisor" />
-
-    <section class="faixa" id="habilidades" aria-labelledby="titulo-habilidades">
-      <div class="cabecalho-secao">
-        <h2 id="titulo-habilidades">Habilidades em desenvolvimento</h2>
-        <p>Conhecimentos que estou construindo durante o Ensino Médio técnico.</p>
-      </div>
-      <div class="grade-habilidades">
-        <div class="habilidade">
-          <strong>HTML semântico</strong>
-          <p>Criação de páginas com estrutura clara, títulos, seções, imagens e links.</p>
-        </div>
-        <div class="habilidade">
-          <strong>CSS moderno</strong>
-          <p>Estilização com cores, espaçamentos, flexbox, grid e responsividade.</p>
-        </div>
-        <div class="habilidade">
-          <strong>JavaScript</strong>
-          <p>Primeiras interações com eventos, funções, listas, condições e manipulação do DOM.</p>
-        </div>
-        <div class="habilidade">
-          <strong>Lógica e projetos</strong>
-          <p>Resolução de problemas, organização de ideias e construção de soluções digitais.</p>
-        </div>
-      </div>
-    </section>
-
-    <hr class="divisor" />
-
-    <section id="contato" class="contato" aria-labelledby="titulo-contato">
-      <div class="painel-contato">
-        <h2 id="titulo-contato">Vamos conversar?</h2>
-        <p>Estou em busca de aprender mais, compartilhar projetos e participar de experiências ligadas à tecnologia e desenvolvimento de sistemas.</p>
-        <div class="acoes">
-          <!-- Abre o aplicativo de e-mail do usuário automaticamente -->
-          <a class="botao" href="mailto:abelsoreria@outlook.com" target="_blank" rel="noopener noreferrer">Enviar E-mail</a>
-        </div>
-      </div>
-      <div class="painel-contato">
-        <nav class="links-contato" aria-label="Links para contato profissional">
-          <!-- Substitua os links abaixo pelos seus perfis reais -->
-          <a href="https://github.com/Abel1200" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
-          <a href="https://www.instagram.com/al.zin7/" target="_blank" rel="noopener noreferrer">Instagram <span aria-hidden="true">↗</span></a>
-          <a href="mailto:abelsoreira@gmail.com">Mensagem <span aria-hidden="true">↗</span></a>
-        </nav>
-      </div>
-    </section>
-
-  <footer class="rodape">
-    <p>Portfólio de ABEL SOBREIRA DE JESUS, todos os dados reservados.</p>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+    <script src="app.js"></script>
+  </body>
 </html>
