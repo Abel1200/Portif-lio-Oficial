@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SmartBill | Hub de Contas</title>
+  <link rel="stylesheet" href="/static/dashboard.css" />
+</head>
+<body>
+
+  <header class="topo-dashboard">
+    <div class="logo"><span>Smart</span>Bill 📑</div>
+    <div class="usuario"><span>Painel de Controle</span></div>
+  </header>
+
+  <main class="container-dashboard">
+    
+    <!-- Cartões de Resumo -->
+    <section class="resumo-cards">
+      <div class="card total">
+        <h3>Total a Pagar</h3>
+        <p class="valor" id="kpiTotal">R$ 0,00</p>
+      </div>
+      <div class="card pendentes">
+        <h3>Contas Pendentes</h3>
+        <p class="contador" id="kpiPendentes">0</p>
+      </div>
+      <div class="card pagas">
+        <h3>Contas Pagas</h3>
+        <p class="contador" id="kpiPagas">0</p>
+      </div>
+    </section>
+
+    <div class="conteudo-principal">
+      
+      <!-- Painel de Upload (IA) -->
+      <aside class="coluna-lateral">
+        <div class="painel-box">
+          <h3>Importar Boleto (PDF)</h3>
+          <p class="instrucao">Selecione o arquivo digital para extração inteligente.</p>
+          <div class="area-upload" id="areaUpload">
+            <span class="icone-upload">📥</span>
+            <p>Clique para enviar o PDF</p>
+            <input type="file" id="arquivoBoleto" accept="application/pdf" hidden />
+          </div>
+        </div>
+      </aside>
+
+      <!-- Tabela de Registros -->
+      <section class="coluna-tabela">
+        <div class="painel-box">
+          <h3>Minhas Contas e Assinaturas</h3>
+          <div class="responsivo-tabela">
+            <table class="tabela-contas">
+              <thead>
+                <tr>
+                  <th>Descrição</th>
+                  <th>Vencimento</th>
+                  <th>Valor</th>
+                  <th>Status</th>
+                  <th>Ação</th>
+                </tr>
+              </thead>
+              <tbody id="corpoTabela">
+                <tr class="linha-vazia">
+                  <td colspan="5">Carregando informações...</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="/static/dashboard.js"></script>
+</body>
+</html>

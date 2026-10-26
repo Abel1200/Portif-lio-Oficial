@@ -1,0 +1,50 @@
+:root {
+    --fundo: #16161a;
+    --painel: #24252d;
+    --texto: #fffffe;
+    --subtexto: #94a1b2;
+    --borda: #4c566a;
+    --primaria: #7f5af0;
+    --primaria-hover: #6246ea;
+    --sucesso: #2cb67d;
+    --alerta: #ff8e3c;
+  }
+  
+  * { margin: 0; padding: 0; box-sizing: border-box; font-family: sans-serif; }
+  body { background-color: var(--fundo); color: var(--texto); padding-bottom: 40px; }
+  
+  .topo-dashboard { background-color: var(--painel); padding: 20px 40px; display: flex; justify-content: space-between; border-bottom: 1px solid var(--borda); }
+  .logo { font-size: 1.5rem; font-weight: bold; }
+  .logo span { color: var(--primaria); }
+  
+  .container-dashboard { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+  
+  .resumo-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; margin-bottom: 40px; }
+  .card { background-color: var(--painel); padding: 25px; border-radius: 8px; border: 1px solid var(--borda); }
+  .card h3 { font-size: 0.9rem; color: var(--subtexto); margin-bottom: 10px; text-transform: uppercase; }
+  .card p { font-size: 2.2rem; font-weight: bold; }
+  .card.pendentes p { color: var(--alerta); }
+  .card.pagas p { color: var(--sucesso); }
+  
+  .conteudo-principal { display: grid; grid-template-columns: 320px 1fr; gap: 30px; }
+  @media (max-width: 850px) { .conteudo-principal { grid-template-columns: 1fr; } }
+  
+  .painel-box { background-color: var(--painel); padding: 25px; border-radius: 8px; border: 1px solid var(--borda); }
+  .painel-box h3 { margin-bottom: 15px; font-size: 1.2rem; }
+  .instrucao { color: var(--subtexto); font-size: 0.85rem; margin-bottom: 20px; }
+  
+  .area-upload { border: 2px dashed var(--borda); padding: 40px 20px; text-align: center; border-radius: 6px; cursor: pointer; transition: 0.2s; }
+  .area-upload:hover { border-color: var(--primaria); }
+  .icone-upload { font-size: 2.5rem; display: block; margin-bottom: 10px; }
+  
+  .tabela-contas { width: 100%; border-collapse: collapse; text-align: left; }
+  .tabela-contas th, .tabela-contas td { padding: 15px; border-bottom: 1px solid var(--borda); }
+  .tabela-contas th { color: var(--subtexto); font-size: 0.85rem; text-transform: uppercase; }
+  
+  .badge { padding: 4px 10px; border-radius: 4px; font-size: 0.8rem; font-weight: bold; }
+  .badge.pendente { background-color: #ff8e3c33; color: var(--alerta); }
+  .badge.pago { background-color: #2cb67d33; color: var(--sucesso); }
+  
+  .btn-acao { background-color: var(--primaria); color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 0.8rem; }
+  .btn-acao:hover { background-color: var(--primaria-hover); }
+  
