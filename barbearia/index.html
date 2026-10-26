@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BarberShop VIP - Estilo e Exclusividade</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones gratuitos via Font Awesome -->
+    <link rel="stylesheet" href="https://cloudflare.com">
+</head>
+<body>
+
+    <!-- CABEÇALHO / NAVEGAÇÃO -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <h1>BARBERSHOP <span>VIP</span></h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#cortes">Cortes</a></li>
+                    <li><a href="#agendamento">Agendamento</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- BANNER PRINCIPAL (HERO) -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h2>Viva a Experiência VIP</h2>
+            <p>Mais que um corte de cabelo, um upgrade no seu visual e na sua autoestima.</p>
+            <a href="#agendamento" class="btn">Agende seu Horário</a>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE TIPOS DE CORTES -->
+    <section id="cortes" class="cortes-section container">
+        <h2 class="section-title">Nossos Serviços & Cortes</h2>
+        <div class="cortes-grid">
+            <div class="corte-card">
+                <h3>Corte Degradê (Fade)</h3>
+                <p>Transição perfeita com acabamento ultra limpo, alinhado e moderno.</p>
+                <span class="preco">R$ 45,00</span>
+            </div>
+            <div class="corte-card">
+                <h3>Barba Premium</h3>
+                <p>Alinhamento com navalha, uso de toalha quente e óleos hidratantes VIP.</p>
+                <span class="preco">R$ 35,00</span>
+            </div>
+            <div class="corte-card">
+                <h3>Combo VIP</h3>
+                <p>Cabelo, Barba e Sobrancelha com atendimento e lavagem inclusa.</p>
+                <span class="preco">R$ 75,00</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE AGENDAMENTO E PAGAMENTO -->
+    <section id="agendamento" class="agendamento-section">
+        <div class="container">
+            <h2 class="section-title">Agendamento & Pagamento Antecipado</h2>
+            <p class="subtitle">Garanta sua vaga pagando com Pix ou Cartão de forma rápida.</p>
+            
+            <form id="form-agendamento" class="form-agendamento">
+                <div class="form-group">
+                    <label for="nome">Nome Completo:</label>
+                    <input type="text" id="nome" required placeholder="Digite seu nome">
+                </div>
+                
+                <div class="form-group">
+                    <label for="servico">Selecione o Serviço:</label>
+                    <select id="servico" required>
+                        <option value="" disabled selected>Selecione o corte...</option>
+                        <option value="45.00">Corte Degradê - R$ 45,00</option>
+                        <option value="35.00">Barba Premium - R$ 35,00</option>
+                        <option value="75.00">Combo VIP - R$ 75,00</option>
+                    </select>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="data">Data:</label>
+                        <input type="date" id="data" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="hora">Horário:</label>
+                        <input type="time" id="hora" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="pagamento">Método de Pagamento Antecipado:</label>
+                    <select id="pagamento" required>
+                        <option value="" disabled selected>Escolha como pagar</option>
+                        <option value="pix">Pix (Aprovação Imediata)</option>
+                        <option value="cartao">Cartão de Crédito</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-block">Confirmar e Ir para o Pagamento</button>
+            </form>
+
+            <!-- Janela de Checkout / Pagamento Fictício Interativo -->
+            <div id="checkout-modal" class="modal hidden">
+                <div class="modal-content">
+                    <h3><i class="fa-solid fa-shield-halved"></i> Tela de Pagamento VIP</h3>
+                    <p id="resumo-pedido"></p>
+                    
+                    <div id="area-pix" class="metodo-pagamento hidden">
+                        <p>Escaneie o QR Code Pix abaixo para pagar:</p>
+                        <div class="qr-code">
+                            <i class="fa-solid fa-qrcode fa-5x"></i>
+                        </div>
+                        <p class="chave-pix">Chave Copia e Cola: <code>pix@barbershopvip.com.br</code></p>
+                    </div>
+
+                    <div id="area-cartao" class="metodo-pagamento hidden">
+                        <input type="text" placeholder="Número do Cartão" class="input-checkout">
+                        <div class="form-row">
+                            <input type="text" placeholder="MM/AA" class="input-checkout">
+                            <input type="text" placeholder="CVV" class="input-checkout">
+                        </div>
+                    </div>
+
+                    <button id="btn-finalizar" class="btn">Concluir Pagamento</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INFORMAÇÕES DE CONTATO E ENDEREÇO -->
+    <section id="contato" class="contato-section container">
+        <h2 class="section-title">Onde Estamos & Contato</h2>
+        <div class="contato-grid">
+            <div class="contato-info">
+                <h3><i class="fa-solid fa-location-dot"></i> Endereço</h3>
+                <p>Avenida Pres. Juscelino Kubitschek, 1500</p>
+                <p>Vila Nova Conceição, São Paulo - SP</p>
+            </div>
+            <div class="contato-info">
+                <h3><i class="fa-solid fa-phone"></i> Contato</h3>
+                <p>Telefone: (11) 99999-8888</p>
+                <p>E-mail: contato@barbershopvip.com.br</p>
+            </div>
+            <div class="contato-info">
+                <h3><i class="fa-solid fa-clock"></i> Horários</h3>
+                <p>Terça a Sexta: 09h às 20h</p>
+                <p>Sábado: 08h às 18h</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2026 BarberShop VIP. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
